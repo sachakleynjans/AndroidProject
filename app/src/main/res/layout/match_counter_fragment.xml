@@ -21,130 +21,7 @@ tools:context="sacha.kleynjans.edu.ece.fr.androidprojet.MatchActivity">
     android:textSize="24sp"
     android:id="@+id/titleStat" />
 
-    <TableLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentBottom="true"
-    android:layout_centerHorizontal="true"
-    android:layout_marginBottom="56dp">
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="20dp">
-
-        <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/button" />
-
-        <TextView
-            android:text="BUTS"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/buts"
-            android:textAlignment="center"
-            android:textSize="24sp"
-            android:textStyle="normal|bold" />
-
-        <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/button2" />
-
-    </TableRow>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="20dp">
-
-        <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/button5" />
-
-        <TextView
-            android:text="FAUTES"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/faute"
-            android:textAlignment="center"
-            android:textSize="24sp"
-            android:textStyle="normal|bold" />
-
-        <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/button6" />
-
-    </TableRow>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="20dp">
-
-        <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/button3" />
-
-        <TextView
-            android:text="ARRETS"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/arrets"
-            android:textSize="24sp"
-            android:textAlignment="center"
-            android:textStyle="normal|bold" />
-
-        <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/button4" />
-
-    </TableRow>
-
-</TableLayout>
-
-<LinearLayout
-    android:orientation="horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/titleStat"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true"
-    android:layout_marginTop="65dp">
-
     <TextView
-        android:text="Equipe1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/equipe1"
-        android:layout_weight="1"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="normal|bold" />
-
-    <TextView
-        android:text="Equipe 2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/equipe2"
-        android:layout_weight="1"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="normal|bold" />
-</LinearLayout>
-
-<TextView
     android:text="Lieu"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -167,9 +44,173 @@ tools:context="sacha.kleynjans.edu.ece.fr.androidprojet.MatchActivity">
         android:text="Fin du match"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/end_match"
+        android:id="@+id/finMatch"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:onClick="goStatistiques" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/lieu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="Equipe1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/equipe1"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:text="Equipe 2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/equipe2"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="normal|bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tableLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="130dp">
+
+        <TextView
+            android:text="20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/score1"
+            android:layout_weight="1"
+            android:textAlignment="viewEnd"
+            android:textSize="30sp"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:text="-"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView6"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:text="17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/score2"
+            android:layout_weight="1"
+            android:textAlignment="viewStart"
+            android:textSize="30sp"
+            android:textStyle="normal|bold" />
+    </LinearLayout>
+
+    <TableLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+        android:layout_above="@+id/annuler"
+        android:layout_centerHorizontal="true">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <Button
+            android:text="Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/but1"
+            android:onClick="goal(1)" />
+
+        <TextView
+            android:text="BUTS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buts"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="normal|bold" />
+
+        <Button
+            android:text="Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/but2" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <Button
+            android:text="Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/faute1" />
+
+        <TextView
+            android:text="FAUTES"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/faute"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="normal|bold" />
+
+        <Button
+            android:text="Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/faute2" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <Button
+            android:text="Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/arret1" />
+
+        <TextView
+            android:text="ARRETS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/arrets"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:textStyle="normal|bold" />
+
+        <Button
+            android:text="Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/arret2" />
+
+    </TableRow>
+
+</TableLayout>
 
 </RelativeLayout>

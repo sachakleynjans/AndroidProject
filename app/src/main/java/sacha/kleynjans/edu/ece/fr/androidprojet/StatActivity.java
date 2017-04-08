@@ -75,7 +75,7 @@ public class StatActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.match1) {
-            // Handle the camera action
+
         } else if (id == R.id.match2) {
 
         } else if (id == R.id.match3) {
